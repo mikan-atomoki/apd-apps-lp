@@ -1,0 +1,508 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="kikiwake / kikoeruka — APDのための音声アプリ">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero-label">for Auditory Processing Disorder</p>
+      <h1 class="hero-title">
+        聞こえを、<br />スマホひとつで変える。
+      </h1>
+      <p class="hero-sub">
+        APD（聴覚情報処理障害）当事者のための2つのAndroidアプリ。<br />
+        特別な機器は要らない。いつものスマホとイヤホンだけ。
+      </p>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">APDという課題</h2>
+      <p class="section-lead">
+        聴力検査では「正常」。でも、人の話が聞き取れない。
+      </p>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <p>
+            騒がしい場所で会話が聞き取れない。音は聞こえるのに、言葉として入ってこない。
+          </p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23"></line>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <p>
+            補聴器は高価で目立つ。そもそもAPDは「聴力」の問題ではないから、合わないことも多い。
+          </p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+            </svg>
+          </div>
+          <p>
+            既存のアプリはノイズ除去や聴覚トレーニングばかり。「この人の声だけ聞きたい」に答えるものがない。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apps overview -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">2つのアプリで、聞こえを支える</h2>
+      <p class="section-lead">
+        「聞こえるようにする」と「聞こえ具合を知る」。<br />
+        異なるアプローチで、APD当事者の日常を支える。
+      </p>
+    </div>
+  </section>
+
+  <!-- kikiwake -->
+  <section class="section app-section">
+    <div class="container">
+      <div class="app-header">
+        <h3 class="app-name">kikiwake</h3>
+        <p class="app-tagline">聞きたい声だけを、届ける。</p>
+      </div>
+      <div class="app-content">
+        <div class="app-description">
+          <p>
+            聞きたい人の声を5秒間録音して登録。あとはアプリを起動するだけで、その人の声だけをリアルタイムに抽出してイヤホンに届ける。
+          </p>
+          <p>
+            教室で先生の声を聞きたい。会議で発表者の話に集中したい。<br />
+            そんな場面で、イヤホンが補聴器代わりになる。
+          </p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <div>
+              <strong>声を登録する</strong>
+              <p>聞きたい人の声を5秒間録音</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <div>
+              <strong>フィルタを起動</strong>
+              <p>周囲の音からその人の声だけを抽出</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <div>
+              <strong>イヤホンで聴く</strong>
+              <p>リアルタイムで聞きたい声が届く</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- kikoeruka -->
+  <section class="section app-section section-alt">
+    <div class="container">
+      <div class="app-header">
+        <h3 class="app-name">kikoeruka</h3>
+        <p class="app-tagline">今の環境で、どれくらい聞こえるかを知る。</p>
+      </div>
+      <div class="app-content">
+        <div class="app-description">
+          <p>
+            今いる場所の音環境をリアルタイムに分析し、APD当事者にとっての「聞き取りやすさ」をスコアで可視化する。
+          </p>
+          <p>
+            「ここは自分にとってつらい環境だ」と客観的に把握できることで、席を変える・イヤホンを使うなど、先回りした対処ができるようになる。
+          </p>
+        </div>
+        <div class="score-display">
+          <div class="score-bar">
+            <div class="score-segment score-green">
+              <span>問題なし</span>
+            </div>
+            <div class="score-segment score-yellow">
+              <span>やや困難</span>
+            </div>
+            <div class="score-segment score-orange">
+              <span>困難</span>
+            </div>
+            <div class="score-segment score-red">
+              <span>聞き取れない</span>
+            </div>
+          </div>
+          <div class="score-labels">
+            <span>1.0</span>
+            <span>0.8</span>
+            <span>0.5</span>
+            <span>0.3</span>
+            <span>0.0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">スマホだけで動く理由</h2>
+      <p class="section-lead">
+        クラウドに音声を送らない。すべてスマホの中で完結する。
+      </p>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <strong>モデルサイズ 2MB以下</strong>
+          <p>1-bit量子化によって、高精度なニューラルネットワークを極限まで圧縮。アプリに同梱できるサイズに。</p>
+        </div>
+        <div class="tech-card">
+          <strong>推論速度 100ms以下</strong>
+          <p>ARM最適化された独自の推論エンジンで、リアルタイム処理を実現。会話の遅延をほぼ感じない。</p>
+        </div>
+        <div class="tech-card">
+          <strong>ネットワーク不要</strong>
+          <p>音声データは一切外部に送信しない。オフラインで動作し、プライバシーを完全に守る。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">デモ</h2>
+      <p class="section-lead">
+        kikiwakeによる話者抽出の効果を聴き比べてみてください。
+      </p>
+      <div class="demo-grid">
+        <div class="demo-card">
+          <p class="demo-label">Before — 処理前の音声</p>
+          <audio controls preload="none">
+            <source src="/demo/before.wav" type="audio/wav" />
+          </audio>
+          <p class="demo-desc">複数の話者が混在した、聞き取りにくい音声</p>
+        </div>
+        <div class="demo-card">
+          <p class="demo-label">After — kikiwake処理後</p>
+          <audio controls preload="none">
+            <source src="/demo/after.wav" type="audio/wav" />
+          </audio>
+          <p class="demo-desc">登録した話者の声だけが抽出された音声</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Future -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">これから</h2>
+      <div class="future-list">
+        <div class="future-item">
+          <strong>教育現場への展開</strong>
+          <p>APDのある学生が、教室で授業を聞き取れるように。学校での合理的配慮のひとつの選択肢として。</p>
+        </div>
+        <div class="future-item">
+          <strong>聴覚検査との連携</strong>
+          <p>kikoeruka のスコアデータを蓄積することで、医療機関でのAPD評価を補助するツールとしての可能性。</p>
+        </div>
+        <div class="future-item">
+          <strong>他の聴覚障害への応用</strong>
+          <p>APDに限らず、加齢性難聴や感音性難聴など、聞き取りに困難を持つ人への拡張。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>kikiwake / kikoeruka</p>
+    </div>
+  </footer>
+</Base>
+
+<style>
+  /* Layout */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .section-alt {
+    background: #f8f8f8;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 120px 0 100px;
+    text-align: center;
+  }
+
+  .hero-label {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    color: #888;
+    margin-bottom: 24px;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 24px;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.9;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .section-lead {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 48px;
+  }
+
+  /* Problem */
+  .problem-grid {
+    display: grid;
+    gap: 24px;
+  }
+
+  .problem-card {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .problem-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+  }
+
+  .problem-card p {
+    color: #444;
+  }
+
+  /* App sections */
+  .app-header {
+    margin-bottom: 32px;
+  }
+
+  .app-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .app-tagline {
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  .app-content {
+    display: grid;
+    gap: 40px;
+  }
+
+  .app-description p {
+    color: #444;
+    margin-bottom: 12px;
+  }
+
+  .app-description p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Steps */
+  .steps {
+    display: grid;
+    gap: 20px;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .step p {
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  /* Score display */
+  .score-display {
+    margin-top: 8px;
+  }
+
+  .score-bar {
+    display: flex;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 48px;
+  }
+
+  .score-segment {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .score-green {
+    background: #4caf50;
+  }
+  .score-yellow {
+    background: #ffc107;
+    color: #333;
+  }
+  .score-orange {
+    background: #ff9800;
+  }
+  .score-red {
+    background: #e53935;
+  }
+
+  .score-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+    font-size: 0.75rem;
+    color: #999;
+    padding: 0 2px;
+  }
+
+  /* Tech */
+  .tech-grid {
+    display: grid;
+    gap: 32px;
+  }
+
+  .tech-card strong {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .tech-card p {
+    color: #555;
+    font-size: 0.95rem;
+  }
+
+  /* Demo */
+  .demo-grid {
+    display: grid;
+    gap: 32px;
+  }
+
+  .demo-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+  .demo-label {
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .demo-card audio {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .demo-desc {
+    font-size: 0.85rem;
+    color: #888;
+  }
+
+  /* Future */
+  .future-list {
+    display: grid;
+    gap: 32px;
+  }
+
+  .future-item strong {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .future-item p {
+    color: #555;
+    font-size: 0.95rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 0;
+    text-align: center;
+    color: #aaa;
+    font-size: 0.85rem;
+    border-top: 1px solid #eee;
+  }
+
+  /* Responsive */
+  @media (min-width: 640px) {
+    .hero-title {
+      font-size: 3rem;
+    }
+
+    .demo-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
