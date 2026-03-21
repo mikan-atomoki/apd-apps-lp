@@ -11,7 +11,7 @@ import Base from "../layouts/Base.astro";
         聞こえを、<br />スマホひとつで変える。
       </h1>
       <p class="hero-sub">
-        APD（聴覚情報処理障害）当事者のための2つのAndroidアプリ。<br />
+        APD（聴覚情報処理障害）に関わるすべての人のための、2つのAndroidアプリ。<br />
         特別な機器は要らない。いつものスマホとイヤホンだけ。
       </p>
     </div>
@@ -22,7 +22,8 @@ import Base from "../layouts/Base.astro";
     <div class="container">
       <h2 class="section-title">APDという課題</h2>
       <p class="section-lead">
-        聴力検査では「正常」。でも、人の話が聞き取れない。
+        聴力検査では「正常」。でも、人の話が聞き取れない。<br />
+        推定では人口の2〜3%が該当するとも言われ、決して珍しくない。
       </p>
       <div class="problem-grid">
         <div class="problem-card">
@@ -61,22 +62,12 @@ import Base from "../layouts/Base.astro";
     </div>
   </section>
 
-  <!-- Apps overview -->
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">2つのアプリで、聞こえを支える</h2>
-      <p class="section-lead">
-        当事者が自分で聞こえを改善するアプリと、<br />
-        周囲の人が配慮のタイミングに気づけるアプリ。
-      </p>
-    </div>
-  </section>
-
   <!-- kikiwake -->
   <section class="section app-section">
     <div class="container">
       <div class="app-header">
-        <h3 class="app-name">kikiwake</h3>
+        <p class="app-for">当事者のためのアプリ</p>
+        <h3 class="app-name">kikiwake <span class="app-name-jp">— 聞き分け</span></h3>
         <p class="app-tagline">聞きたい声だけを、届ける。</p>
       </div>
       <div class="app-content">
@@ -112,6 +103,16 @@ import Base from "../layouts/Base.astro";
             </div>
           </div>
         </div>
+        <div class="app-screenshots">
+          <figure class="app-screenshot">
+            <img src="/img/kikiwake-enroll.jpg" alt="kikiwake 声の登録画面" />
+            <figcaption>声の登録画面</figcaption>
+          </figure>
+          <figure class="app-screenshot">
+            <img src="/img/kikiwake-filter.jpg" alt="kikiwake フィルタリング中の画面" />
+            <figcaption>フィルタリング中</figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </section>
@@ -120,40 +121,31 @@ import Base from "../layouts/Base.astro";
   <section class="section app-section section-alt">
     <div class="container">
       <div class="app-header">
-        <h3 class="app-name">kikoeruka</h3>
-        <p class="app-tagline">配慮が必要なタイミングを、可視化する。</p>
+        <p class="app-for">周囲の人のためのアプリ</p>
+        <h3 class="app-name">kikoeruka <span class="app-name-jp">— 聞こえるか</span></h3>
+        <p class="app-tagline">困ってる人を、取り残さない。</p>
       </div>
       <div class="app-content">
         <div class="app-description">
           <p>
-            今の音環境をリアルタイムに分析し、APD当事者にとっての「聞き取りやすさ」をスコアで表示する。周囲の人が使うアプリ。
+            APDの当事者は、自分が聞き取れていないことを周囲に伝えづらい。そもそも「聞こえているのに聞き取れない」という状態は、本人にも周囲にもわかりにくい。
           </p>
           <p>
-            「今この環境、APDの人にはつらいかもしれない」と気づける。声のかけ方を変える、静かな場所に移動する、テキストで補足する。そうした配慮の判断材料になる。
+            kikoeruka は、今の音環境がAPD当事者にとってどれくらい聞き取りにくいかをスコアで可視化する。教室に置いておけば、先生が「今は聞き取りにくい環境だ」と気づける。職場なら、上司が話し方を変えるきっかけになる。
+          </p>
+          <p>
+            当事者が声を上げなくても、環境が配慮を促してくれる。そういう仕組み。
           </p>
         </div>
-        <div class="score-display">
-          <div class="score-bar">
-            <div class="score-segment score-green">
-              <span>問題なし</span>
-            </div>
-            <div class="score-segment score-yellow">
-              <span>やや困難</span>
-            </div>
-            <div class="score-segment score-orange">
-              <span>困難</span>
-            </div>
-            <div class="score-segment score-red">
-              <span>聞き取れない</span>
-            </div>
-          </div>
-          <div class="score-labels">
-            <span>1.0</span>
-            <span>0.8</span>
-            <span>0.5</span>
-            <span>0.3</span>
-            <span>0.0</span>
-          </div>
+        <div class="app-screenshots">
+          <figure class="app-screenshot">
+            <img src="/img/kikoeruka-safe.png" alt="kikoeruka 問題なし（スコア0.96）" />
+            <figcaption>問題なし — スコア 0.96</figcaption>
+          </figure>
+          <figure class="app-screenshot">
+            <img src="/img/kikoeruka-danger.png" alt="kikoeruka 聞き取り不可（スコア0.00）" />
+            <figcaption>聞き取り不可 — スコア 0.00</figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -168,16 +160,16 @@ import Base from "../layouts/Base.astro";
       </p>
       <div class="tech-grid">
         <div class="tech-card">
-          <strong>モデルサイズ 2MB以下</strong>
-          <p>1-bit量子化によって、高精度なニューラルネットワークを極限まで圧縮。アプリに同梱できるサイズに。</p>
+          <strong>写真1枚より軽い</strong>
+          <p>AIモデルのサイズは2MB以下。スマホの写真1枚よりも軽い。アプリをインストールするだけで、すぐ使える。</p>
         </div>
         <div class="tech-card">
-          <strong>推論速度 100ms以下</strong>
-          <p>ARM最適化された独自の推論エンジンで、リアルタイム処理を実現。会話の遅延をほぼ感じない。</p>
+          <strong>まばたきより速い</strong>
+          <p>音声の処理にかかる時間は0.1秒以下。話している言葉がほぼリアルタイムで届くから、自然な会話ができる。</p>
         </div>
         <div class="tech-card">
-          <strong>ネットワーク不要</strong>
-          <p>音声データは一切外部に送信しない。オフラインで動作し、プライバシーを完全に守る。</p>
+          <strong>声は外に出さない</strong>
+          <p>音声データはスマホの中だけで処理される。インターネット接続も不要。録音した声がどこかに送られる心配はない。</p>
         </div>
       </div>
     </div>
@@ -347,6 +339,41 @@ import Base from "../layouts/Base.astro";
 
   .app-description p:last-child {
     margin-bottom: 0;
+  }
+
+  /* App for label */
+  .app-for {
+    font-size: 0.85rem;
+    color: #888;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+
+  .app-name-jp {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #888;
+  }
+
+  /* Screenshots */
+  .app-screenshots {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 400px;
+  }
+
+  .app-screenshot img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+  }
+
+  .app-screenshot figcaption {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 8px;
   }
 
   /* Steps */
