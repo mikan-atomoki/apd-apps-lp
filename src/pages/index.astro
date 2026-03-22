@@ -2,17 +2,29 @@
 import Base from "../layouts/Base.astro";
 ---
 
-<Base title="kikiwake / kikoeruka — APDのための音声アプリ">
+<Base title="kikiwake / kikoeruka — 聞きたい声を届けるアプリ">
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="header-inner">
+      <a href="#top" class="header-logo">kikiwake / kikoeruka</a>
+      <nav class="header-nav">
+        <a href="#kikiwake">kikiwake</a>
+        <a href="#kikoeruka">kikoeruka</a>
+        <a href="#tech">しくみ</a>
+      </nav>
+    </div>
+  </header>
+
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <p class="hero-label">for Auditory Processing Disorder</p>
       <h1 class="hero-title">
-        聞こえを、<br />スマホひとつで変える。
+        聞きたい声だけ、届く。
       </h1>
       <p class="hero-sub">
-        APD（聴覚情報処理障害）に関わるすべての人のための、2つのAndroidアプリ。<br />
-        特別な機器は要らない。いつものスマホとイヤホンだけ。
+        聴力検査では「正常」。でも、人の話が聞き取れない。
+        そんな悩みを抱える人は、推定で人口の2〜3%。
+        必要なのは、スマホとイヤホンだけ。
       </p>
       <div class="hero-screenshot">
         <div class="phone-frame">
@@ -22,44 +34,21 @@ import Base from "../layouts/Base.astro";
     </div>
   </section>
 
-  <!-- Demo (early) -->
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">まず、聴いてみてください。</h2>
-      <p class="section-lead">
-        kikiwakeによる話者抽出。処理前と処理後の音声を比べてみてください。
-      </p>
-      <div class="demo-grid">
-        <div class="demo-card">
-          <p class="demo-label">Before</p>
-          <audio controls preload="none">
-            <source src="/demo/before.wav" type="audio/wav" />
-          </audio>
-          <p class="demo-desc">複数の話者が混在した音声</p>
-        </div>
-        <div class="demo-card">
-          <p class="demo-label">After</p>
-          <audio controls preload="none">
-            <source src="/demo/after.wav" type="audio/wav" />
-          </audio>
-          <p class="demo-desc">登録した話者の声だけを抽出</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Problem (compressed) -->
+  <!-- What is APD -->
   <section class="section">
-    <div class="container">
-      <h2 class="section-title">APDという課題</h2>
-      <p class="problem-text">
-        聴力検査では「正常」。でも、人の話が聞き取れない。<br />
-        音は聞こえるのに、言葉として入ってこない。<br />
-        推定では人口の2〜3%。決して珍しい症状ではない。
+    <div class="container apd-intro">
+      <h2 class="section-title">APD（聴覚情報処理障害）とは</h2>
+      <p>
+        音は聞こえるのに、言葉として理解できない。
+        騒がしい場所で会話が追えない。複数人の話が混ざると何も入ってこない。
       </p>
-      <p class="problem-text">
-        補聴器は高価で目立つ。そもそもAPDは「聴力」の問題ではないから、合わないことも多い。<br />
-        既存のアプリはノイズ除去や聴覚トレーニングばかりで、「この人の声だけ聞きたい」に答えるものがなかった。
+      <p>
+        補聴器は高価で目立つうえ、APDは「聴力」の問題ではないから合わないことも多い。
+        既存のアプリはノイズ除去や聴覚トレーニングばかりで、
+        「この人の声だけ聞きたい」に応えるものがなかった。
+      </p>
+      <p class="apd-intro-bold">
+        kikiwake と kikoeruka は、その空白を埋める2つのAndroidアプリ。
       </p>
     </div>
   </section>
@@ -67,12 +56,12 @@ import Base from "../layouts/Base.astro";
   <!-- Interstitial -->
   <section class="interstitial">
     <div class="container">
-      <p class="interstitial-text">イヤホンが、補聴器になる。</p>
+      <p class="interstitial-text">必要なのは、スマホとイヤホンだけ。</p>
     </div>
   </section>
 
   <!-- kikiwake -->
-  <section class="section app-section">
+  <section class="section app-section" id="kikiwake">
     <div class="container">
       <div class="app-header">
         <p class="app-for">当事者のためのアプリ</p>
@@ -103,7 +92,7 @@ import Base from "../layouts/Base.astro";
               <span class="step-number">3</span>
               <div>
                 <strong>イヤホンで聴く</strong>
-                <p>聞きたい声が届く</p>
+                <p>聞きたい声だけが届く</p>
               </div>
             </div>
           </div>
@@ -132,12 +121,12 @@ import Base from "../layouts/Base.astro";
   <!-- Interstitial -->
   <section class="interstitial section-alt">
     <div class="container">
-      <p class="interstitial-text">困ってる人を、取り残さない。</p>
+      <p class="interstitial-text">困っている人を、取り残さない。</p>
     </div>
   </section>
 
   <!-- kikoeruka -->
-  <section class="section app-section section-alt">
+  <section class="section app-section section-alt" id="kikoeruka">
     <div class="container">
       <div class="app-header">
         <p class="app-for">周囲の人のためのアプリ</p>
@@ -150,10 +139,10 @@ import Base from "../layouts/Base.astro";
             APDの当事者は、自分が聞き取れていないことを周囲に伝えづらい。「聞こえているのに聞き取れない」という状態は、本人にも周囲にもわかりにくい。
           </p>
           <p>
-            kikoeruka は、今の音環境がAPD当事者にとってどれくらい聞き取りにくいかをスコアで可視化する。教室に置いておけば先生が気づける。職場なら上司が話し方を変えるきっかけになる。
+            kikoeruka は、今の音環境がAPD当事者にとってどれくらい聞き取りづらいかをリアルタイムでスコア化する。音声の明瞭度をAIが判定し、0（聞き取り不可）〜 1（問題なし）で表示する。
           </p>
           <p>
-            当事者が声を上げなくても、環境が配慮を促してくれる。そういう仕組み。
+            教室に置いておけば先生が気づける。職場なら上司が話し方を変えるきっかけになる。当事者が声を上げなくても、環境が配慮を促してくれる仕組み。
           </p>
         </div>
         <div class="app-screenshots">
@@ -184,57 +173,84 @@ import Base from "../layouts/Base.astro";
   </section>
 
   <!-- Tech -->
-  <section class="section">
+  <section class="section" id="tech">
     <div class="container">
-      <h2 class="section-title">スマホだけで動く理由</h2>
+      <h2 class="section-title">安心して使える理由</h2>
       <div class="tech-numbers">
         <div class="tech-number-card">
           <span class="tech-number-value">&lt; 2</span>
           <span class="tech-number-unit">MB</span>
-          <p>AIモデルのサイズ。<br />写真1枚より軽い。</p>
+          <p>AIモデルのサイズ。写真1枚より軽い。</p>
         </div>
         <div class="tech-number-card">
           <span class="tech-number-value">0</span>
           <span class="tech-number-unit">通信</span>
-          <p>音声は一切外部に送らない。<br />完全オフラインで動作。</p>
+          <p>音声データは一切外部に送らない。完全オフライン。</p>
         </div>
       </div>
       <p class="tech-note">
-        独自の軽量化技術でニューラルネットワークを極限まで圧縮。スマホのCPUだけで、声紋認識や音声抽出といった高度な処理を実行する。専用チップもクラウドも使わない。
+        軽量なニューラルネットワークがスマホ上で直接動作。クラウドに音声を送る必要がないから、プライバシーも通信環境も心配いらない。
       </p>
-    </div>
-  </section>
-
-  <!-- Future -->
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">これから</h2>
-      <div class="future-list">
-        <div class="future-item">
-          <strong>教育現場への展開</strong>
-          <p>APDのある学生が、教室で授業を聞き取れるように。学校での合理的配慮のひとつの選択肢として。</p>
-        </div>
-        <div class="future-item">
-          <strong>聴覚検査との連携</strong>
-          <p>kikoeruka のスコアデータを蓄積することで、医療機関でのAPD評価を補助するツールとしての可能性。</p>
-        </div>
-        <div class="future-item">
-          <strong>他の聴覚障害への応用</strong>
-          <p>APDに限らず、加齢性難聴や感音性難聴など、聞き取りに困難を持つ人への拡張。</p>
-        </div>
-      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <p>kikiwake / kikoeruka</p>
+    <div class="container footer-content">
+      <p class="footer-brand">kikiwake / kikoeruka</p>
+      <p class="footer-contact">
+        Contact:
+        <a href="mailto:tomoki.py@gmail.com">tomoki.py@gmail.com</a>
+      </p>
     </div>
   </footer>
 </Base>
 
 <style>
+  /* Header */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid #eee;
+  }
+
+  .header-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-logo {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  .header-nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  .header-nav a {
+    font-size: 0.85rem;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .header-nav a:hover {
+    color: #1a1a1a;
+  }
+
   /* Layout */
   .container {
     max-width: 800px;
@@ -252,15 +268,8 @@ import Base from "../layouts/Base.astro";
 
   /* Hero */
   .hero {
-    padding: 120px 0 80px;
+    padding: 140px 0 80px;
     text-align: center;
-  }
-
-  .hero-label {
-    font-size: 0.85rem;
-    letter-spacing: 0.12em;
-    color: #888;
-    margin-bottom: 24px;
   }
 
   .hero-title {
@@ -273,8 +282,11 @@ import Base from "../layouts/Base.astro";
   .hero-sub {
     font-size: 1rem;
     color: #555;
-    line-height: 1.9;
+    line-height: 2;
     margin-bottom: 48px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-screenshot {
@@ -286,24 +298,23 @@ import Base from "../layouts/Base.astro";
   .section-title {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 
-  .section-lead {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 40px;
-  }
-
-  /* Problem */
-  .problem-text {
+  /* APD intro */
+  .apd-intro p {
     color: #444;
     margin-bottom: 16px;
     line-height: 2;
   }
 
-  .problem-text:last-child {
+  .apd-intro p:last-child {
     margin-bottom: 0;
+  }
+
+  .apd-intro-bold {
+    font-weight: 700;
+    color: #1a1a1a !important;
   }
 
   /* Interstitial */
@@ -356,6 +367,7 @@ import Base from "../layouts/Base.astro";
   .app-text p {
     color: #444;
     margin-bottom: 16px;
+    line-height: 1.9;
   }
 
   .app-text p:last-child {
@@ -368,12 +380,16 @@ import Base from "../layouts/Base.astro";
     border-radius: 24px;
     padding: 8px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
   }
 
   .phone-frame img {
     width: 100%;
     border-radius: 16px;
     display: block;
+    /* Crop status bar from screenshots */
+    margin-top: -6%;
+    margin-bottom: -2%;
   }
 
   /* Screenshots */
@@ -508,58 +524,32 @@ import Base from "../layouts/Base.astro";
     line-height: 1.9;
   }
 
-  /* Demo */
-  .demo-grid {
-    display: grid;
-    gap: 24px;
-  }
-
-  .demo-card {
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 20px;
-  }
-
-  .demo-label {
-    font-weight: 700;
-    margin-bottom: 12px;
-    font-size: 0.95rem;
-  }
-
-  .demo-card audio {
-    width: 100%;
-    margin-bottom: 6px;
-  }
-
-  .demo-desc {
-    font-size: 0.8rem;
-    color: #888;
-  }
-
-  /* Future */
-  .future-list {
-    display: grid;
-    gap: 28px;
-  }
-
-  .future-item strong {
-    display: block;
-    margin-bottom: 4px;
-  }
-
-  .future-item p {
-    color: #555;
-    font-size: 0.95rem;
-  }
-
   /* Footer */
   .footer {
     padding: 40px 0;
     text-align: center;
-    color: #aaa;
-    font-size: 0.85rem;
     border-top: 1px solid #eee;
+  }
+
+  .footer-brand {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+
+  .footer-contact {
+    font-size: 0.8rem;
+    color: #aaa;
+  }
+
+  .footer-contact a {
+    color: #888;
+    text-decoration: none;
+  }
+
+  .footer-contact a:hover {
+    color: #1a1a1a;
   }
 
   /* Responsive */
@@ -572,10 +562,6 @@ import Base from "../layouts/Base.astro";
       font-size: 2rem;
     }
 
-    .demo-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-
     .app-body {
       grid-template-columns: 1fr auto;
       align-items: start;
@@ -583,6 +569,52 @@ import Base from "../layouts/Base.astro";
 
     .key-number-value {
       font-size: 5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header-nav {
+      gap: 16px;
+    }
+
+    .header-nav a {
+      font-size: 0.8rem;
+    }
+
+    .hero {
+      padding: 100px 0 60px;
+    }
+
+    .hero-title {
+      font-size: 1.8rem;
+    }
+
+    .section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+    }
+
+    .app-name {
+      font-size: 1.5rem;
+    }
+
+    .interstitial-text {
+      font-size: 1.3rem;
+    }
+
+    .tech-numbers {
+      grid-template-columns: 1fr;
+    }
+
+    .key-number-row {
+      gap: 20px;
+    }
+
+    .key-number-value {
+      font-size: 3rem;
     }
   }
 </style>
