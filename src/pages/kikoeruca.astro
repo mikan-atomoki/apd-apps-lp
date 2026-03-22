@@ -1,0 +1,449 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="kikoeruca — 聞き取りづらさを、伝えなくていい">
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="header-logo">kikiwake / kikoeruca</a>
+      <nav class="header-nav">
+        <a href="/#kikiwake">kikiwake</a>
+        <a href="/#kikoeruca">kikoeruca</a>
+        <a href="/#tech">しくみ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">聞き取りづらさを、伝えなくていい。</h1>
+      <p class="hero-sub">kikoeruca</p>
+    </div>
+  </section>
+
+  <!-- Product showcase -->
+  <section class="showcase">
+    <div class="container">
+      <div class="showcase-screenshots">
+        <div class="phone-frame">
+          <img src="/img/kikoeruca-safe.png" alt="kikoeruca 問題なし（スコア0.96）" />
+        </div>
+        <div class="phone-frame">
+          <img src="/img/kikoeruca-danger.png" alt="kikoeruca 聞き取り不可（スコア0.00）" />
+        </div>
+      </div>
+      <div class="score-display fade-in">
+        <div class="score">
+          <span class="score-value score-good">0.96</span>
+          <p class="score-label">問題なし</p>
+        </div>
+        <div class="score-arrow" aria-hidden="true">&rarr;</div>
+        <div class="score">
+          <span class="score-value score-bad">0.00</span>
+          <p class="score-label">聞き取り不可</p>
+        </div>
+      </div>
+      <p class="showcase-copy fade-in">音声の明瞭度をAIがリアルタイムで判定。スコアひとつで、今の環境が伝わる。</p>
+    </div>
+  </section>
+
+  <!-- Origin story -->
+  <section class="origin">
+    <div class="container">
+      <p class="origin-label fade-in">きっかけ</p>
+      <h2 class="origin-title fade-in">伝えられない、という問題。</h2>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="container">
+      <div class="story-block fade-in">
+        <p>APD当事者として、聞き取りづらい瞬間は何度もあった。</p>
+      </div>
+
+      <div class="story-block fade-in">
+        <p>でも、それを周囲に伝える方法がなかった。</p>
+      </div>
+
+      <div class="story-block fade-in">
+        <p>「聞こえてるのに聞き取れない」は、説明しても伝わらない。自分でも、いつ・どれくらい聞き取れていないのかわからない。</p>
+      </div>
+
+      <div class="story-block highlight fade-in">
+        <p>言葉で伝えられないなら、数字で見せればいい。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Target -->
+  <section class="target-section">
+    <div class="container">
+      <div class="target fade-in">
+        <p class="target-label">誰のためのアプリか</p>
+        <p class="target-text">APD当事者と会話する機会がある、すべての非当事者へ。</p>
+        <p class="target-sub">教室の先生。職場の上司。家族。友人。当事者が声を上げなくても、環境が配慮を促してくれる仕組み。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Goal -->
+  <section class="goal-section">
+    <div class="container">
+      <div class="goal fade-in">
+        <p class="goal-label">目標</p>
+        <p class="goal-text">APD当事者にとって、頼りになるアプリにする。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back -->
+  <section class="back">
+    <div class="container">
+      <a href="/" class="back-link">&larr; トップに戻る</a>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+  document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+</script>
+
+<style>
+  /* Header */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid #eee;
+  }
+
+  .header-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-logo {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  .header-nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  .header-nav a {
+    font-size: 0.85rem;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .header-nav a:hover {
+    color: #1a1a1a;
+  }
+
+  /* Utilities */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Fade-in animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hero */
+  .hero {
+    padding: 160px 0 80px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    white-space: nowrap;
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: #888;
+    letter-spacing: 0.1em;
+  }
+
+  /* Showcase */
+  .showcase {
+    padding: 40px 0 100px;
+    text-align: center;
+  }
+
+  .showcase-screenshots {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .phone-frame {
+    width: 180px;
+    background: #1a1a1a;
+    border-radius: 24px;
+    padding: 8px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+  }
+
+  .phone-frame img {
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+    margin-top: -6%;
+    margin-bottom: -2%;
+  }
+
+  .score-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  .score-value {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .score-good {
+    color: #4caf50;
+  }
+
+  .score-bad {
+    color: #e53935;
+  }
+
+  .score-label {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 8px;
+  }
+
+  .score-arrow {
+    font-size: 1.5rem;
+    color: #ccc;
+  }
+
+  .showcase-copy {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.9;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  /* Origin */
+  .origin {
+    padding: 120px 0 40px;
+    text-align: center;
+  }
+
+  .origin-label {
+    font-size: 0.85rem;
+    color: #888;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+  }
+
+  .origin-title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  /* Story */
+  .story {
+    padding: 40px 0 120px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .story-block {
+    margin-bottom: 32px;
+  }
+
+  .story-block p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 2;
+  }
+
+  .story-block.highlight {
+    background: #1a1a1a;
+    padding: 32px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 48px;
+  }
+
+  .story-block.highlight p {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  /* Target */
+  .target-section {
+    padding: 0 0 80px;
+  }
+
+  .target {
+    padding: 40px;
+    background: #f8f8f8;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .target-label {
+    font-size: 0.85rem;
+    color: #888;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+  }
+
+  .target-text {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+
+  .target-sub {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.9;
+  }
+
+  /* Goal */
+  .goal-section {
+    padding: 0 0 120px;
+  }
+
+  .goal {
+    padding: 40px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .goal-label {
+    font-size: 0.85rem;
+    color: #888;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+  }
+
+  .goal-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 2;
+    color: #1a1a1a;
+  }
+
+  /* Back */
+  .back {
+    padding: 0 0 80px;
+    text-align: center;
+  }
+
+  .back-link {
+    font-size: 0.9rem;
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .back-link:hover {
+    color: #1a1a1a;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .hero {
+      padding: 120px 0 60px;
+    }
+
+    .showcase-screenshots {
+      gap: 16px;
+    }
+
+    .phone-frame {
+      width: 150px;
+    }
+
+    .score-value {
+      font-size: 2.2rem;
+    }
+
+    .score-display {
+      gap: 20px;
+    }
+
+    .showcase-copy {
+      font-size: 1rem;
+    }
+
+    .origin-title {
+      font-size: 1.5rem;
+    }
+
+    .story-block p {
+      font-size: 1rem;
+    }
+
+    .story-block.highlight p {
+      font-size: 1.1rem;
+    }
+
+    .target, .goal {
+      padding: 28px;
+    }
+
+    .goal-text {
+      font-size: 1.05rem;
+    }
+  }
+</style>

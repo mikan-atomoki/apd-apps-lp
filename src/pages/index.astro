@@ -2,14 +2,14 @@
 import Base from "../layouts/Base.astro";
 ---
 
-<Base title="kikiwake / kikoeruka — 聞きたい声を届けるアプリ">
+<Base title="kikiwake / kikoeruca — 聞きたい声を届けるアプリ">
   <!-- Header -->
   <header class="header" id="top">
     <div class="header-inner">
-      <a href="#top" class="header-logo">kikiwake / kikoeruka</a>
+      <a href="#top" class="header-logo">kikiwake / kikoeruca</a>
       <nav class="header-nav">
         <a href="#kikiwake">kikiwake</a>
-        <a href="#kikoeruka">kikoeruka</a>
+        <a href="#kikoeruca">kikoeruca</a>
         <a href="#tech">しくみ</a>
       </nav>
     </div>
@@ -28,7 +28,7 @@ import Base from "../layouts/Base.astro";
       </p>
       <div class="hero-screenshot">
         <div class="phone-frame">
-          <img src="/img/kikoeruka-safe.png" alt="kikoeruka アプリ画面" />
+          <img src="/img/kikoeruca-safe.png" alt="kikoeruca アプリ画面" />
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@ import Base from "../layouts/Base.astro";
         「この人の声だけ聞きたい」に応えるものがなかった。
       </p>
       <p class="apd-intro-bold">
-        kikiwake と kikoeruka は、その空白を埋める2つのAndroidアプリ。
+        kikiwake と kikoeruca は、その空白を埋める2つのAndroidアプリ。
       </p>
     </div>
   </section>
@@ -115,6 +115,7 @@ import Base from "../layouts/Base.astro";
         <span class="key-number-unit">秒</span>
         <p class="key-number-desc">声の登録にかかる時間</p>
       </div>
+      <a href="/kikiwake" class="story-link">開発の経緯を読む &rarr;</a>
     </div>
   </section>
 
@@ -125,12 +126,12 @@ import Base from "../layouts/Base.astro";
     </div>
   </section>
 
-  <!-- kikoeruka -->
-  <section class="section app-section section-alt" id="kikoeruka">
+  <!-- kikoeruca -->
+  <section class="section app-section section-alt" id="kikoeruca">
     <div class="container">
       <div class="app-header">
         <p class="app-for">周囲の人のためのアプリ</p>
-        <h3 class="app-name">kikoeruka <span class="app-name-jp">— 聞こえるか</span></h3>
+        <h3 class="app-name">kikoeruca <span class="app-name-jp">— 聞こえるか</span></h3>
         <p class="app-tagline">配慮が必要なタイミングを、可視化する。</p>
       </div>
       <div class="app-body">
@@ -139,7 +140,7 @@ import Base from "../layouts/Base.astro";
             APDの当事者は、自分が聞き取れていないことを周囲に伝えづらい。「聞こえているのに聞き取れない」という状態は、本人にも周囲にもわかりにくい。
           </p>
           <p>
-            kikoeruka は、今の音環境がAPD当事者にとってどれくらい聞き取りづらいかをリアルタイムでスコア化する。音声の明瞭度をAIが判定し、0（聞き取り不可）〜 1（問題なし）で表示する。
+            kikoeruca は、今の音環境がAPD当事者にとってどれくらい聞き取りづらいかをリアルタイムでスコア化する。音声の明瞭度をAIが判定し、0（聞き取り不可）〜 1（問題なし）で表示する。
           </p>
           <p>
             教室に置いておけば先生が気づける。職場なら上司が話し方を変えるきっかけになる。当事者が声を上げなくても、環境が配慮を促してくれる仕組み。
@@ -148,12 +149,12 @@ import Base from "../layouts/Base.astro";
         <div class="app-screenshots">
           <figure class="app-screenshot">
             <div class="phone-frame">
-              <img src="/img/kikoeruka-safe.png" alt="kikoeruka 問題なし（スコア0.96）" />
+              <img src="/img/kikoeruca-safe.png" alt="kikoeruca 問題なし（スコア0.96）" />
             </div>
           </figure>
           <figure class="app-screenshot">
             <div class="phone-frame">
-              <img src="/img/kikoeruka-danger.png" alt="kikoeruka 聞き取り不可（スコア0.00）" />
+              <img src="/img/kikoeruca-danger.png" alt="kikoeruca 聞き取り不可（スコア0.00）" />
             </div>
           </figure>
         </div>
@@ -169,6 +170,7 @@ import Base from "../layouts/Base.astro";
           <p class="key-number-desc">聞き取り不可</p>
         </div>
       </div>
+      <a href="/kikoeruca" class="story-link">開発の経緯を読む &rarr;</a>
     </div>
   </section>
 
@@ -197,7 +199,7 @@ import Base from "../layouts/Base.astro";
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
-      <p class="footer-brand">kikiwake / kikoeruka</p>
+      <p class="footer-brand">kikiwake / kikoeruca</p>
       <p class="footer-contact">
         Contact:
         <a href="mailto:tomoki.py@gmail.com">tomoki.py@gmail.com</a>
@@ -522,6 +524,24 @@ import Base from "../layouts/Base.astro";
     font-size: 0.95rem;
     color: #555;
     line-height: 1.9;
+  }
+
+  /* Story link */
+  .story-link {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff;
+    background: #1a1a1a;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .story-link:hover {
+    background: #333;
   }
 
   /* Footer */

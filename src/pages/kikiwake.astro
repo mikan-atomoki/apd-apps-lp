@@ -1,0 +1,493 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="kikiwake — あなたのスマホが、補聴器になる">
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="header-logo">kikiwake / kikoeruca</a>
+      <nav class="header-nav">
+        <a href="/#kikiwake">kikiwake</a>
+        <a href="/#kikoeruca">kikoeruca</a>
+        <a href="/#tech">しくみ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">あなたのスマホが、補聴器になる。</h1>
+      <p class="hero-sub">kikiwake</p>
+    </div>
+  </section>
+
+  <!-- Product showcase -->
+  <section class="showcase">
+    <div class="container">
+      <div class="showcase-screenshots">
+        <div class="phone-frame">
+          <img src="/img/kikiwake-enroll.jpg" alt="kikiwake 声の登録画面" />
+        </div>
+        <div class="phone-frame">
+          <img src="/img/kikiwake-filter.jpg" alt="kikiwake フィルタリング中の画面" />
+        </div>
+      </div>
+      <p class="showcase-copy">聞きたい人の声を5秒間録音。あとはアプリを起動するだけ。</p>
+    </div>
+  </section>
+
+  <!-- Steps -->
+  <section class="steps-section">
+    <div class="container">
+      <div class="step-row fade-in">
+        <span class="step-num">1</span>
+        <div>
+          <strong>声を登録する</strong>
+          <p>聞きたい人の声を5秒間録音</p>
+        </div>
+      </div>
+      <div class="step-row fade-in">
+        <span class="step-num">2</span>
+        <div>
+          <strong>フィルタを起動</strong>
+          <p>周囲の音からその人の声だけを抽出</p>
+        </div>
+      </div>
+      <div class="step-row fade-in">
+        <span class="step-num">3</span>
+        <div>
+          <strong>イヤホンで聴く</strong>
+          <p>聞きたい声だけが届く</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Big number -->
+  <section class="big-number">
+    <div class="container">
+      <span class="big-number-value fade-in">5</span>
+      <span class="big-number-unit fade-in">秒</span>
+      <p class="big-number-desc fade-in">声の登録にかかる時間。それだけ。</p>
+    </div>
+  </section>
+
+  <!-- Origin story -->
+  <section class="origin">
+    <div class="container">
+      <p class="origin-label fade-in">きっかけ</p>
+      <h2 class="origin-title fade-in">電車の中の、ふとした思考。</h2>
+    </div>
+  </section>
+
+  <section class="thought-flow">
+    <div class="container">
+      <div class="thought fade-in">
+        <p>うるさ……ノイキャン欲しい……</p>
+      </div>
+
+      <div class="thought fade-in">
+        <p>そういえばAPDの人って、この状態が常にじゃん。</p>
+      </div>
+
+      <div class="thought fade-in">
+        <p>ノイキャンで解決できる？</p>
+      </div>
+
+      <div class="thought fade-in">
+        <p>……いや待て、ノイキャンって人の声は全部通すのか。</p>
+      </div>
+
+      <div class="thought-break fade-in" aria-hidden="true">
+        <span>........</span>
+      </div>
+
+      <div class="thought breakthrough fade-in">
+        <p>じゃあ逆に、聞きたい声以外を全部ノイズにしてしまえば？</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Goal -->
+  <section class="goal-section">
+    <div class="container">
+      <div class="goal fade-in">
+        <p class="goal-label">目標</p>
+        <p class="goal-text">雑音の中でも、特別な機材を買うことなく、スマホとイヤホンだけで円滑なコミュニケーションが取れるようにする。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back -->
+  <section class="back">
+    <div class="container">
+      <a href="/" class="back-link">&larr; トップに戻る</a>
+    </div>
+  </section>
+</Base>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+  document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+</script>
+
+<style>
+  /* Header */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid #eee;
+  }
+
+  .header-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-logo {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  .header-nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  .header-nav a {
+    font-size: 0.85rem;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .header-nav a:hover {
+    color: #1a1a1a;
+  }
+
+  /* Utilities */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Fade-in animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hero */
+  .hero {
+    padding: 160px 0 80px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 5.5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    white-space: nowrap;
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: #888;
+    letter-spacing: 0.1em;
+  }
+
+  /* Showcase */
+  .showcase {
+    padding: 40px 0 100px;
+    text-align: center;
+  }
+
+  .showcase-screenshots {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .phone-frame {
+    width: 180px;
+    background: #1a1a1a;
+    border-radius: 24px;
+    padding: 8px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+  }
+
+  .phone-frame img {
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+    margin-top: -6%;
+    margin-bottom: -2%;
+  }
+
+  .showcase-copy {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.9;
+  }
+
+  /* Steps */
+  .steps-section {
+    padding: 80px 0;
+    background: #f8f8f8;
+  }
+
+  .step-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto 32px;
+  }
+
+  .step-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .step-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .step-row strong {
+    font-size: 1.05rem;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .step-row p {
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  /* Big number */
+  .big-number {
+    padding: 120px 0;
+    text-align: center;
+  }
+
+  .big-number-value {
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #1a1a1a;
+  }
+
+  .big-number-unit {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #888;
+    margin-left: 4px;
+  }
+
+  .big-number-desc {
+    font-size: 1rem;
+    color: #888;
+    margin-top: 16px;
+  }
+
+  /* Origin */
+  .origin {
+    padding: 120px 0 40px;
+    text-align: center;
+  }
+
+  .origin-label {
+    font-size: 0.85rem;
+    color: #888;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+  }
+
+  .origin-title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  /* Thought flow */
+  .thought-flow {
+    padding: 40px 0 120px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .thought {
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    background: #f5f5f5;
+    border-radius: 16px;
+    max-width: 80%;
+  }
+
+  .thought p {
+    color: #444;
+    line-height: 1.8;
+    font-size: 1.05rem;
+  }
+
+  .thought:nth-child(even) {
+    margin-left: auto;
+  }
+
+  .thought-break {
+    text-align: center;
+    padding: 32px 0;
+    color: #ccc;
+    font-size: 1.5rem;
+    letter-spacing: 0.3em;
+  }
+
+  .thought.breakthrough {
+    background: #1a1a1a;
+    max-width: 100%;
+    padding: 32px;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .thought.breakthrough p {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.8;
+  }
+
+  /* Goal */
+  .goal-section {
+    padding: 0 0 120px;
+  }
+
+  .goal {
+    padding: 40px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    text-align: center;
+  }
+
+  .goal-label {
+    font-size: 0.85rem;
+    color: #888;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+  }
+
+  .goal-text {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: #1a1a1a;
+  }
+
+  /* Back */
+  .back {
+    padding: 0 0 80px;
+    text-align: center;
+  }
+
+  .back-link {
+    font-size: 0.9rem;
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .back-link:hover {
+    color: #1a1a1a;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .hero {
+      padding: 120px 0 60px;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .showcase-screenshots {
+      gap: 16px;
+    }
+
+    .phone-frame {
+      width: 150px;
+    }
+
+    .showcase-copy {
+      font-size: 1rem;
+    }
+
+    .big-number-value {
+      font-size: 5rem;
+    }
+
+    .big-number-unit {
+      font-size: 1.8rem;
+    }
+
+    .origin-title {
+      font-size: 1.5rem;
+    }
+
+    .thought {
+      max-width: 90%;
+    }
+
+    .thought.breakthrough p {
+      font-size: 1.1rem;
+    }
+
+    .goal {
+      padding: 28px;
+    }
+
+    .goal-text {
+      font-size: 1rem;
+    }
+  }
+</style>
