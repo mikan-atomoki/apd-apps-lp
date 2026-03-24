@@ -5,7 +5,7 @@ import Base from "../layouts/Base.astro";
 <Base title="kikiwake — あなたのスマホが、補聴器になる">
   <header class="header">
     <div class="header-inner">
-      <a href="/" class="header-logo">kikiwake / kikoeruca</a>
+      <a href="/" class="header-logo">kikoca</a>
       <nav class="header-nav">
         <a href="/#kikiwake">kikiwake</a>
         <a href="/#kikoeruca">kikoeruca</a>
@@ -442,24 +442,63 @@ import Base from "../layouts/Base.astro";
 
   /* Responsive */
   @media (max-width: 640px) {
-    .hero {
-      padding: 120px 0 60px;
-    }
-
-    .hero-title {
-      font-size: 2rem;
-    }
-
-    .showcase-screenshots {
+    .header-nav {
       gap: 16px;
     }
 
+    .header-nav a {
+      font-size: 0.8rem;
+    }
+
+    .hero {
+      padding: 100px 0 48px;
+    }
+
+    .hero-title {
+      font-size: 1.6rem;
+      white-space: normal;
+    }
+
+    .showcase {
+      padding: 24px 0 60px;
+    }
+
+    .showcase-screenshots {
+      gap: 12px;
+    }
+
     .phone-frame {
-      width: 150px;
+      width: 140px;
     }
 
     .showcase-copy {
-      font-size: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .steps-section {
+      padding: 48px 0;
+    }
+
+    .step-row {
+      gap: 16px;
+    }
+
+    .step-num {
+      width: 36px;
+      height: 36px;
+      font-size: 0.9rem;
+    }
+
+    .step-row strong {
+      font-size: 0.95rem;
+    }
+
+    .step-row p {
+      font-size: 0.85rem;
+    }
+
+    .big-number {
+      padding: 72px 0;
     }
 
     .big-number-value {
@@ -470,24 +509,49 @@ import Base from "../layouts/Base.astro";
       font-size: 1.8rem;
     }
 
+    .origin {
+      padding: 72px 0 32px;
+    }
+
     .origin-title {
       font-size: 1.5rem;
     }
 
+    .thought-flow {
+      padding: 32px 0 72px;
+    }
+
     .thought {
-      max-width: 90%;
+      max-width: 92%;
+      padding: 16px 20px;
+    }
+
+    .thought p {
+      font-size: 0.95rem;
+    }
+
+    .thought.breakthrough {
+      padding: 24px;
     }
 
     .thought.breakthrough p {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
+    }
+
+    .goal-section {
+      padding: 0 0 72px;
     }
 
     .goal {
-      padding: 28px;
+      padding: 24px;
     }
 
     .goal-text {
       font-size: 1rem;
+    }
+
+    .back {
+      padding: 0 0 48px;
     }
   }
 </style>
