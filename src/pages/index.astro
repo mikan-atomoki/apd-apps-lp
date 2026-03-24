@@ -56,7 +56,7 @@ import Base from "../layouts/Base.astro";
   <!-- Interstitial -->
   <section class="interstitial">
     <div class="container">
-      <p class="interstitial-text">必要なのは、スマホとイヤホンだけ。</p>
+      <p class="interstitial-text"><span class="nowrap">必要なのは、</span><span class="nowrap">スマホとイヤホンだけ。</span></p>
     </div>
   </section>
 
@@ -122,7 +122,7 @@ import Base from "../layouts/Base.astro";
   <!-- Interstitial -->
   <section class="interstitial section-alt">
     <div class="container">
-      <p class="interstitial-text">困っている人を、取り残さない。</p>
+      <p class="interstitial-text"><span class="nowrap">困っている人を、</span><span class="nowrap">取り残さない。</span></p>
     </div>
   </section>
 
@@ -330,6 +330,10 @@ import Base from "../layouts/Base.astro";
     font-weight: 700;
     color: #1a1a1a;
     letter-spacing: 0.04em;
+  }
+
+  .nowrap {
+    white-space: nowrap;
   }
 
   /* App sections */
@@ -622,8 +626,7 @@ import Base from "../layouts/Base.astro";
     }
 
     .interstitial-text {
-      font-size: 1.15rem;
-      white-space: nowrap;
+      font-size: 1.3rem;
     }
 
     .tech-numbers {
